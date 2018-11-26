@@ -1,0 +1,13 @@
+version: 2
+
+jobs:
+  build:
+    working_directory: ~/enki-project
+    machine: true
+    environment:
+      - ENKI: 'example'
+    steps:
+      - checkout
+      - run:
+          name: Display example environment
+          command: echo "This is an $ENKI"
